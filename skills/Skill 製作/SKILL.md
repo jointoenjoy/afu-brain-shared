@@ -2,7 +2,7 @@
 name: Skill 製作
 category: 營運治理
 status: 草稿
-owner: 大寶 · Simon
+owner: 大寶 · 主理人
 source: YouTube「Skill 實戰教學，從製作到維護的完整指南」(youtu.be/PuqX3Kv2ino, 2026-04-25)
 ---
 

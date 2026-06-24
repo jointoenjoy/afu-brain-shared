@@ -2,7 +2,7 @@
 name: 社群內容
 category: 產品行銷
 status: 草稿
-owner: Myling
+owner: 社群PM
 ---
 
 # 社群內容 agent

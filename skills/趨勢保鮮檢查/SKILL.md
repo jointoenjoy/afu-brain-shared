@@ -2,7 +2,7 @@
 name: 趨勢保鮮檢查
 category: 洞察研究
 status: 草稿
-owner: 大寶 · Simon
+owner: 大寶 · 主理人
 ---
 
 # 趨勢保鮮檢查

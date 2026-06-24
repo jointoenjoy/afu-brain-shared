@@ -3,7 +3,7 @@ name: UX 體驗研究
 alias: UX大師
 category: 洞察研究
 status: 草稿
-owner: 大寶 · Simon
+owner: 大寶 · 主理人
 ---
 
 # UX 體驗研究（UX大師）· 世界級 UX 研究 agent

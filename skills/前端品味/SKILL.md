@@ -2,7 +2,7 @@
 name: 前端品味
 category: 產品行銷
 status: 啟用
-owner: 大寶 · Simon（視覺製作期主力）
+owner: 大寶 · 主理人（視覺製作期主力）
 source: Leonxlnx/taste-skill（GitHub 本週 star 飆升，AI 品味提升／防 slop 工具，2026-06）
 ---
 

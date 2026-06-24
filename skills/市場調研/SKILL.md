@@ -2,7 +2,7 @@
 name: 市場調研
 category: 洞察研究
 status: 草稿
-owner: 大寶 · Simon
+owner: 大寶 · 主理人
 ---
 
 # 市場調研 agent
