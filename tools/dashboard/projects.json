@@ -1,0 +1,62 @@
+[
+  {
+    "name": "hrv-breathing-app",
+    "desc": "練息場 · HRV 呼吸設計提案原型（含 iPhone 預覽與設計總覽）",
+    "github": "https://github.com/jointoenjoy/hrv-breathing-app",
+    "test": "https://sandbox-hrv.flow-af1.workers.dev"
+  },
+  {
+    "name": "moneybot",
+    "desc": "練息場(創意思境/MDCG)外包請款管理系統 — 第一階段 demo",
+    "github": "https://github.com/jointoenjoy/moneybot",
+    "test": "https://sandbox-moneybot.flow-af1.workers.dev"
+  },
+  {
+    "name": "mind-energy",
+    "desc": "心理能量管理線上課程＋蘇格拉底 AI 助教",
+    "github": "https://github.com/jointoenjoy/mind-energy",
+    "test": "https://sandbox-courses.flow-af1.workers.dev",
+    "prod": "https://courses.jointoenjoy.com"
+  },
+  {
+    "name": "afu-brain",
+    "desc": "阿福（滿福）的大腦：人格、共用知識庫、技能與養腦 SOP",
+    "github": "https://github.com/jointoenjoy/afu-brain"
+  },
+  {
+    "name": "sandbox-aiflow",
+    "desc": "滿福成長儀表板＋AI 工作流藍圖（測試頁）",
+    "github": "https://github.com/jointoenjoy/sandbox-aiflow",
+    "test": "https://sandbox-aiflow.pages.dev"
+  },
+  {
+    "name": "deck-studio",
+    "desc": "練息場 Saleskit 簡報系統（一句話生成簡報、AI 挑版型）",
+    "github": "https://github.com/jointoenjoy/deck-studio"
+  },
+  {
+    "name": "handbook",
+    "desc": "練息場團隊知識庫 handbook（上架流程、設計規範 SOP）",
+    "github": "https://github.com/jointoenjoy/handbook"
+  },
+  {
+    "name": "Joy-editor",
+    "desc": "線上逐字稿驅動影片剪輯器",
+    "github": "https://github.com/jointoenjoy/Joy-editor"
+  },
+  {
+    "name": "PM",
+    "desc": "練息場專案管理看板（Trello 式，含 Chill 活動細項）",
+    "github": "https://github.com/jointoenjoy/PM"
+  },
+  {
+    "name": "ai-roi",
+    "desc": "AI 投資報酬／成績單 demo",
+    "github": "https://github.com/jointoenjoy/ai-roi"
+  },
+  {
+    "name": "vscode_tuition",
+    "desc": "從零教新手用 VS Code＋接任何 AI 的教學頁（偷懶就是 AI 時代的超能力）",
+    "test": "https://vscode-tuition.pages.dev"
+  }
+]

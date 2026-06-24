@@ -1,0 +1,13 @@
+name = "afu-telegram-inbox"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+
+# 非機密設定可放這裡（機密請用 wrangler secret put）
+[vars]
+GITHUB_REPO = "jointoenjoy/afu-brain"
+ALLOWED_CHAT_ID = "8668285987"
+
+# 機密用指令設定，不要寫進這個檔：
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_SECRET
+#   wrangler secret put GITHUB_TOKEN

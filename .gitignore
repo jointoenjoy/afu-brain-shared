@@ -1,0 +1,12 @@
+# wrangler 部署快取（本機產生、勿進版控）
+.wrangler/
+**/.wrangler/
+node_modules/
+.DS_Store
+
+# 私人腦不進共用 repo（各自放自己的私人 repo）
+情節記憶/
+待辦.md
+你的思維.md
+inbox/*
+!inbox/README.md
