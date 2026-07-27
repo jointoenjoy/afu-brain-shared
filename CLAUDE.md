@@ -16,7 +16,7 @@
 - **更新了知識庫、技能、或規則並 push 後**：接著重建並部署「aiflow 滿福成長儀表板」，讓人類在測試頁看到最新的你。步驟：
   1. `cd /Users/mdcg/Documents/vscode/workflow/deploy-sandbox-aiflow`
   2. `node tools/build-status.mjs`（讀本大腦、重畫「滿福」分頁）
-  3. `npm_config_cache=/tmp/afu-npm-cache npx wrangler@4 pages deploy . --project-name sandbox-aiflow --commit-dirty=true`（部署到 sandbox-aiflow.pages.dev）
+  3. `wrangler pages deploy . --project-name sandbox-aiflow --commit-dirty=true`（部署到 sandbox-aiflow.pages.dev）
   4. 把 aiflow repo 的改動一起 `git commit` + `git push`。
   滿福頁＝你的成長儀表板，資料同步自本大腦（afu-brain）。你每次長大就跑這步，測試頁自動反映；唯一例外是碰三條紅線要先問大寶。
 
@@ -110,10 +110,21 @@
 - 指令（macOS）：`open -a "Google Chrome" "<url>"`。改哪一塊就開哪一頁（後台→ `/admin`、某前端頁→該頁、本機預覽→ `http://localhost:<port>`）。改了多處就開最主要那一頁。
 - 這是本機無害操作，屬預設放手，不用另外問。
 
+**wrangler 一律用全域指令，不要再用 `npx wrangler@4`**：`npx` 每跑一次就重解析＋重裝 wrangler，一次要一到兩分鐘，常常直接卡到逾時。改成機器上裝一份、直接打 `wrangler ...`（也不用再帶 `npm_config_cache=...`）。
+- **要用 wrangler 前先確認**：`command -v wrangler`。有 → 直接用。沒有（新電腦／新環境）→ **先裝再繼續，不用問決策者**：
+  ```
+  mkdir -p ~/.local/npm-cache ~/.local/lib/wrangler ~/.local/bin
+  printf 'cache=%s/.local/npm-cache\n' "$HOME" > ~/.npmrc          # 繞開可能被 root 佔住的舊快取
+  cd ~/.local/lib/wrangler && npm install wrangler@4 --no-fund --no-audit
+  ln -sf ~/.local/lib/wrangler/node_modules/.bin/wrangler ~/.local/bin/wrangler
+  ```
+  裝在家目錄（`~/.local`）不需要 sudo；`~/.local/bin` 通常已在 PATH 上（不在就自己加）。裝完 `wrangler whoami` 確認登入的是該用的部署帳號。
+- **npm 安裝爆 EACCES／EEXIST 在 `~/.npm/_cacache`**：那是以前用過 `sudo npm` 留下的 root 檔案。別去 sudo 修，照上面把 npm 快取改到 `~/.local/npm-cache` 就繞過了。
+
 做好一個專案或改動後：
 1. 先在**本機預覽**確認 OK；起好 server 後即 `open -a "Google Chrome"` 跳本機網址給大寶看。
 2. 依 handbook 的「上架流程」部署到 **`sandbox-<專案>`** 的 Cloudflare 公開頁（wrangler 已登入部署帳號，**不需重新登入**）。
-   - 靜態頁可用：`npm_config_cache=/tmp/afu-npm-cache npx wrangler@4 pages deploy <資料夾> --project-name sandbox-<專案>`
+   - 靜態頁可用：`wrangler pages deploy <資料夾> --project-name sandbox-<專案> --commit-dirty=true`
 3. 部署成功後**自動 `open -a "Google Chrome"` 跳出 sandbox 測試網址**，並把網址也回報給大寶——這是「內部傳遞用」的網址，**不一定**會發佈為正式站。
 4. 安全界線：sandbox 公開頁全世界看得到。**機密報告、個資、金鑰絕不放上任何公開頁**，只留在私有 repo。
 5. **對外產出不出現真實團隊人名**：任何可能傳給外部對象的東西（網頁、簡報、報告、成績單等），**一律不放真實團隊成員姓名**（各成員本名）。需要指涉時改用「工程把關」「內容團隊」「PM」等中性角色稱呼。目的：讓大寶能放心把成品傳給任何溝通對象。內部私有文件不受此限。
